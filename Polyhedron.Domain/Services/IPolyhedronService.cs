@@ -3,7 +3,7 @@ using Polyhedron.Domain.Entities;
 
 namespace Polyhedron.Domain.Services
 {
-    public interface IPolyhedronService<T>
+    public interface IPolyhedronService<T> where T : RegularPolyhedron
     {
         bool IsPolyhedronCollide(T polyhedron1, T polyhedron2);
         decimal GetIntersectedVolume(T polyhedron1, T polyhedron2);

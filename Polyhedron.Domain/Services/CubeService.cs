@@ -3,9 +3,9 @@ using Polyhedron.Domain.Entities;
 
 namespace Polyhedron.Domain.Services
 {
-    public class CubeService
+    public class CubeService : IPolyhedronService<Cube>
     {
-        public bool IsCubesCollide(Cube cube1, Cube cube2)
+        public bool IsPolyhedronCollide(Cube cube1, Cube cube2)
         {
             if (IsCoordinateCollide(cube1.Scope.MinX, cube2.Scope.MinX, cube1.Scope.MaxX, cube2.Scope.MaxX) &&
                 IsCoordinateCollide(cube1.Scope.MinY, cube2.Scope.MinY, cube1.Scope.MaxY, cube2.Scope.MaxY) &&

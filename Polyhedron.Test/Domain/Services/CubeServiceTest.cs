@@ -22,7 +22,7 @@ namespace Polyhedron.Test.Domain.Services
         {
             CubeService cubeService = new();
 
-            var result = cubeService.IsCubesCollide(cube1, cube2);
+            var result = cubeService.IsPolyhedronCollide(cube1, cube2);
 
             Assert.Equal(expected, result);
         }

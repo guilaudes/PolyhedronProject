@@ -28,7 +28,7 @@ namespace Polyhedron.Api.Services
             Cube cube1 = GetCube(data.Cube1Params);
             Cube cube2 = GetCube(data.Cube2Params);
 
-            result.IsCollide = _cubeService.IsCubesCollide(cube1, cube2);
+            result.IsCollide = _cubeService.IsPolyhedronCollide(cube1, cube2);
             result.IntersectedVolume = _cubeService.GetIntersectedVolume(cube1, cube2);
 
             return result;
